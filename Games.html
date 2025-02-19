@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>quiz game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<style type="text/css">
+    	body
+    	{
+		    font-family:"Edu VIC WA NT Beginner", cursive;
+		    text-align:center;
+		    background-color:steelblue;
+		    background-position:top center;
+		    background-size:cover;
+		    background-repeat:no-repeat;
+		    background-attachment:fixed;
+		    height:100vh;
+		    display:flex;
+		    justify-content:center;
+		    align-items:center;
+		}
+
+		.container
+		{
+		    border:3px solid black;
+		    border-radius:30px;
+		    width:40%;
+		    font-size:30px;
+		    height:700px;
+		    padding:20px;
+		    display:none;
+		    background-color:lightsteelblue;
+		    overflow-y:auto;
+		}
+
+        button
+        {
+            background-color:green;
+			color:white;
+			text-align:center;
+			border:none;
+			border-radius:10px;
+			font-size:20px;
+			height:40px;
+			width:200px;
+			margin-top:20px;
+        }
+
+		button:hover
+		{
+			color:red;
+		}
+
+		h1
+		{
+			font-weight:800px;
+			margin-top:170px;
+			text-decoration:underline;
+		}
+
+		.btn-1
+		{
+			background-color:green;
+			color:white;
+			text-align:center;
+			padding:8px;
+			border:none;
+			border-radius:10px;
+			font-size:20px;
+			height:40px;
+			width:200px;
+			margin-top:20px;
+		}
+
+		.btn-1 a
+		{
+			color:white;
+			text-decoration:none;
+		}
+
+		.btn-1 a:hover
+		{
+			color:red;
+		}
+
+		.btn-2
+		{
+			background-color:green;
+			color:white;
+			text-align:center;
+			padding:8px;
+			border:none;
+			border-radius:10px;
+			font-size:20px;
+			height:40px;
+			width:200px;
+			margin-top:20px;
+		}
+
+		.btn-2 a
+		{
+			color:white;
+			text-decoration:none;
+		}
+
+		.btn-2 a:hover
+		{
+			color:red;
+		}
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>1. When did the Bengali Language Movement take place?</h1>
+        <input type="radio" name="question1"> 1950<br>
+        <input type="radio" name="question1" id="correct1"> 1952<br>
+        <input type="radio" name="question1"> 1948<br>
+        <input type="radio" name="question1"> 1971<br>
+        <button class="next" onclick="next(1)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>2. What was the main reason for the Language Movement?</h1>
+        <input type="radio" name="question2"> Demand for equal rights<br>
+        <input type="radio" name="question2"> Demand for an independent state<br>
+        <input type="radio" name="question2" id="correct2"> Demand for recognition of Bangla as a state language<br>
+        <input type="radio" name="question2"> Demand for economic reform<br>
+        <button class="next" onclick="next(2)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>3. Which country did East Pakistan later become?</h1>
+        <input type="radio" name="question3"> India<br>
+        <input type="radio" name="question3"> Sri Lanka<br>
+        <input type="radio" name="question3" id="correct3"> Bangladesh<br>
+        <input type="radio" name="question3"> Nepal<br>
+        <button class="next" onclick="next(3)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>4. What percentage of Pakistan’s population spoke Bangla in 1952?</h1>
+        <input type="radio" name="question4"> 25%<br>
+        <input type="radio" name="question4"> 40%<br>
+        <input type="radio" name="question4" id="correct4"> 56%<br>
+        <input type="radio" name="question4"> 70%<br>
+        <button class="next" onclick="next(4)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>5. Why did the people of East Pakistan protest against the imposition of Urdu?</h1>
+        <input type="radio" name="question5"> Urdu was difficult to learn<br>
+        <input type="radio" name="question5"> Urdu had no cultural significance in East Pakistan<br>
+        <input type="radio" name="question5" id="correct5"> Urdu was spoken by only a small part of the population<br>
+        <input type="radio" name="question5"> Urdu was not recognized internationally<br>
+        <button class="next" onclick="next(5)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>6. Who was the leader of Pakistan in 1948 when he declared Urdu as the only state language?</h1>
+        <input type="radio" name="question6"> Liaquat Ali Khan<br>
+        <input type="radio" name="question6" id="correct6"> Muhammad Ali Jinnah <br>
+        <input type="radio" name="question6"> Ayub Khan<br>
+        <input type="radio" name="question6"> Yahya Khan<br>
+        <button class="next" onclick="next(6)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>7. Where did Muhammad Ali Jinnah declare that "Urdu, and only Urdu, shall be the state language of Pakistan"?</h1>
+        <input type="radio" name="question7"> Karachi<br>
+        <input type="radio" name="question7"> Lahore<br>
+        <input type="radio" name="question7" id="correct7"> Dhaka<br>
+        <input type="radio" name="question7"> Islamabad<br>
+        <button class="next" onclick="next(7)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>8. What was the response of the government to the protests?</h1>
+        <input type="radio" name="question8"> They accepted the demand<br>
+        <input type="radio" name="question8"> They ignored the protests<br>
+        <input type="radio" name="question8" id="correct8"> They banned gatherings and arrested students <br>
+        <input type="radio" name="question8"> They asked for negotiations<br>
+        <button class="next" onclick="next(8)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>9. Where did the police fire on the protesters on February 21, 1952?</h1>
+        <input type="radio" name="question9" id="correct9"> Dhaka Medical College<br>
+        <input type="radio" name="question9"> Jagannath University<br>
+        <input type="radio" name="question9"> Chittagong Universitybr>
+        <input type="radio" name="question9"> Rajshahi College<br>
+        <button class="next" onclick="next(9)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>10. Which law did the government impose to stop the protests?</h1>
+        <input type="radio" name="question10"> Section 377<br>
+        <input type="radio" name="question10"> Section 302<br>
+        <input type="radio" name="question10" id="correct10"> Section 144<br>
+        <input type="radio" name="question10"> Section 420<br>
+        <button class="next" onclick="next(10)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>11. Who among the following was NOT a martyr of the Language Movement?</h1>
+        <input type="radio" name="question11"> Rafiq Uddin Ahmed<br>
+        <input type="radio" name="question11"> Salam<br>
+        <input type="radio" name="question11" id="correct11"> Abul Kalam Azad<br>
+        <input type="radio" name="question11"> Abul Barkat<br>
+        <button class="next" onclick="next(11)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>12. When was Abdul Jabbar born?</h1>
+        <input type="radio" name="question12" id="correct12"> 1919<br>
+        <input type="radio" name="question12"> 1927<br>
+        <input type="radio" name="question12"> 1925<br>
+        <input type="radio" name="question12"> 1930<br>
+        <button class="next" onclick="next(12)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>13. Where was Abdus Salam born?</h1>
+        <input type="radio" name="question13" id="correct13"> Feni<br>
+        <input type="radio" name="question13"> Dhaka<br>
+        <input type="radio" name="question13"> Manikganj<br>
+        <input type="radio" name="question13"> Rajshahi<br>
+        <button class="next" onclick="next(13)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>14. What was Abul Barkat's field of study at the University of Dhaka?</h1>
+        <input type="radio" name="question14"> History<br>
+        <input type="radio" name="question14"> Economics<br>
+        <input type="radio" name="question14" id="correct14"> Political Science<br>
+        <input type="radio" name="question14"> Physics<br>
+        <button class="next" onclick="next(14)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>15. How did Shafiur Rahman die?</h1>
+        <input type="radio" name="question15"> He was beaten by police<br>
+        <input type="radio" name="question15" id="correct15"> He was shot by police while commuting to work<br>
+        <input type="radio" name="question15"> He was poisoned<br>
+        <input type="radio" name="question15"> He died in jail<br>
+        <button class="next" onclick="next(15)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>16. In which year did the Pakistan government recognize Bangla as an official language?</h1>
+        <input type="radio" name="question16"> 1952<br>
+        <input type="radio" name="question16"> 1954<br>
+        <input type="radio" name="question16" id="correct16"> 1956<br>
+        <input type="radio" name="question16"> 1971<br>
+        <button class="next" onclick="next(16)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>17. What major event did the Language Movement lead to in 1971?</h1>
+        <input type="radio" name="question17"> The formation of Pakistan<br>
+        <input type="radio" name="question17" id="correct17"> The Independence of Bangladesh<br>
+        <input type="radio" name="question17"> The partition of India<br>
+        <input type="radio" name="question17"> The creation of UNESCO<br>
+        <button class="next" onclick="next(17)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>18. Where are most of the martyrs buried?</h1>
+        <input type="radio" name="question18"> National Martyrs’ Memorial<br>
+        <input type="radio" name="question18" id="correct18"> Azimpur Graveyard<br>
+        <input type="radio" name="question18"> Suhrawardy Udyan<br>
+        <input type="radio" name="question18"> University of Dhaka<br>
+        <button class="next" onclick="next(18)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>19. When did UNESCO recognize February 21 as International Mother Language Day?</h1>
+        <input type="radio" name="question19"> 1997<br>
+        <input type="radio" name="question19" id="correct19"> 1999<br>
+        <input type="radio" name="question19"> 2000<br>
+        <input type="radio" name="question19"> 2002<br>
+        <button class="next" onclick="next(19)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>20. Who proposed to UNESCO to declare February 21 as International Mother Language Day?</h1>
+        <input type="radio" name="question20"> Indian students<br>
+        <input type="radio" name="question20" id="correct20"> Bangladeshi expatriates in Canada<br>
+        <input type="radio" name="question20"> Pakistan’s government<br>
+        <input type="radio" name="question20"> UNESCO itself<br>
+        <button class="next" onclick="next(20)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>21. In which year was International Mother Language Day first observed?</h1>
+        <input type="radio" name="question21"> 1999<br>
+        <input type="radio" name="question21" id="correct21"> 2000<br>
+        <input type="radio" name="question21"> 2001<br>
+        <input type="radio" name="question21"> 2005<br>
+        <button class="next" onclick="next(21)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>22. What is the main purpose of International Mother Language Day?</h1>
+        <input type="radio" name="question22"> To promote English learning<br>
+        <input type="radio" name="question22"> To celebrate only Bangla language<br>
+        <input type="radio" name="question22" id="correct22"> To promote language diversity and cultural respect<br>
+        <input type="radio" name="question22"> To encourage tourism<br>
+        <button class="next" onclick="next(22)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>23. What monument was built to honor the martyrs of the Language Movement?</h1>
+        <input type="radio" name="question23" id="correct23"> Shaheed Minar<br>
+        <input type="radio" name="question23"> National Martyrs' Memorial<br>
+        <input type="radio" name="question23"> Jatiyo Sangsad Bhaban<br>
+        <input type="radio" name="question23"> Lalbagh Fort<br>
+        <button class="next" onclick="next(23)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>24. In which city is the main Shaheed Minar located?</h1>
+        <input type="radio" name="question24"> Chittagong<br>
+        <input type="radio" name="question24" id="correct24"> Dhaka<br>
+        <input type="radio" name="question24"> Sylhet<br>
+        <input type="radio" name="question24"> Barisal<br>
+        <button class="next" onclick="next(24)">Next</button>
+    </div>
+
+    <div class="container">
+        <h1>25. How do people in Bangladesh honor International Mother Language Day?</h1>
+        <input onclick="result()" type="radio" name="question25"> By celebrating New Year<br>
+        <input onclick="result()" type="radio" name="question25" id="correct25"> By visiting the Shaheed Minar<br>
+        <input onclick="result()" type="radio" name="question25"> By watching movies<br>
+        <input onclick="result()" type="radio" name="question25"> By organizing sports events<br>
+        <button class="btn-1"><a href="Main.html"><-- Go Back</a></button><br>
+       	<button class="btn-2"><a href="Games.html">Restart</a></button>
+    </div>
+
+</body>
+	<script>
+        document.getElementsByClassName('container')[0].style.display = "block";
+
+        function next(id)
+        {
+            document.getElementsByClassName('container')[id-1].style.display = "none";
+            document.getElementsByClassName('container')[id].style.display = "block";
+        }
+        function result() {
+            var score = 0;
+            if (document.getElementById('correct1').checked) {
+                score++;
+            }
+            if (document.getElementById('correct2').checked) {
+                score++;
+            }
+            if (document.getElementById('correct3').checked) {
+                score++;
+            }
+            if (document.getElementById('correct4').checked) {
+                score++;
+            }
+            if (document.getElementById('correct5').checked) {
+                score++;
+            }
+            if (document.getElementById('correct6').checked) {
+                score++;
+            }
+            if (document.getElementById('correct7').checked) {
+                score++;
+            }
+            if (document.getElementById('correct8').checked) {
+                score++;
+            }
+            if (document.getElementById('correct9').checked) {
+                score++;
+            }
+            if (document.getElementById('correct10').checked) {
+                score++;
+            }
+            if (document.getElementById('correct11').checked) {
+                score++;
+            }
+            if (document.getElementById('correct12').checked) {
+                score++;
+            }
+            if (document.getElementById('correct13').checked) {
+                score++;
+            }
+            if (document.getElementById('correct14').checked) {
+                score++;
+            }
+            if (document.getElementById('correct15').checked) {
+                score++;
+            }
+            if (document.getElementById('correct16').checked) {
+                score++;
+            }
+            if (document.getElementById('correct17').checked) {
+                score++;
+            }
+            if (document.getElementById('correct18').checked) {
+                score++;
+            }
+            if (document.getElementById('correct19').checked) {
+                score++;
+            }
+            if (document.getElementById('correct20').checked) {
+                score++;
+            }
+            if (document.getElementById('correct21').checked) {
+                score++;
+            }
+            if (document.getElementById('correct22').checked) {
+                score++;
+            }
+            if (document.getElementById('correct23').checked) {
+                score++;
+            }
+            if (document.getElementById('correct23').checked) {
+                score++;
+            }
+            if (document.getElementById('correct25').checked) {
+                score++;
+            }
+            alert("Your Score Is: "+ score);
+        }
+    </script>
+</html>
